@@ -1,11 +1,6 @@
 import pytest
 
-from fizz_buzz import __version__
 from fizz_buzz.fizz_buzz import fizz_buzz, fizz_buzz_sequence, fizz_buzz_dict
-
-
-def test_version():
-    assert __version__ == "0.1.0"
 
 
 def test_one():
@@ -104,7 +99,9 @@ def test_fizz_buzz_list():
         14,
         "FizzBuzz",
     ]
-    actual = fizz_buzz_sequence([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+    actual = fizz_buzz_sequence(
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    )
     assert expected == actual
 
 
