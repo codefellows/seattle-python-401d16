@@ -1,37 +1,38 @@
-import random
-
-# chars = ['0'...'9']
-
-
 def encrypt(plain, key):
-    encrypted_text = ""
 
-    # 1234 -> 2345 with key of 1
+    encrypted = ""
 
     for char in plain:
-        num = int(char)
-        shifted_num = (num + key) % 10
-        encrypted_text += str(shifted_num)
+        num = (int(char) + key) % 10
+        encrypted += str(num)
 
-    return encrypted_text
+    return encrypted
 
 
-def decrypt(encoded, key):
-    return encrypt(encoded, -key)
+def decrypt(plain, key):
+    return encrypt(plain, -key)
 
 
 if __name__ == "__main__":
-    pins = [
-        "1234",
-        "9876",
-        "0000",
-        "9999",
-    ]
 
-    for pin in pins:
-        key = random.randint(1, 9)
-        print("plain pin", pin)
-        encrypted_pin = encrypt(pin, key)
-        print("encrypted_pin", encrypted_pin)
-        decrypted_pin = decrypt(encrypted_pin, key)
-        print("decrypted_pin", decrypted_pin)
+    encrypted = encrypt("1234", 1)
+    assert encrypted == "2345"
+    assert decrypt(encrypted, 1) == "1234"
+
+    encrypted = encrypt("9999", 1)
+    assert encrypted == "0000", encrypted
+    assert decrypt(encrypted, 1) == "9999"
+
+    encrypted = encrypt("9999", 2)
+    assert encrypted == "1111", encrypted
+    assert decrypt(encrypted, 2) == "9999"
+
+    encrypted = encrypt("9999", -2)
+    assert encrypted == "7777", encrypted
+    assert decrypt(encrypted, -2) == "9999"
+
+    encrypted = encrypt("1111", -2)
+    assert encrypted == "9999", encrypted
+    assert decrypt(encrypted, -2) == "1111"
+
+    print("TESTS PASSED")
