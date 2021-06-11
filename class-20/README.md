@@ -30,19 +30,18 @@ Tools At Your Disposal
 - To Manage and Deploy Code
   - SCM: Use the strict [Git Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
   - Deployment:
-      - Local dev/feature branches
-        - One Branch Per Feature
-      - Staging (Pre-Production) Branch
-      - Main (Production) Branch
+    - Local dev/feature branches
+      - One Branch Per Feature
+    - Staging (Pre-Production) Branch
+    - Main (Production) Branch
   - Developers work locally in feature branches
   - Check-in and merge PRs against `stage`
   - Once verified, PR stage against main and "deploy"
   - Protect `main` from direct check-ins
-      - Ask TA/Instructor if not sure how to protect branch.
+    - Ask TA/Instructor if not sure how to protect branch.
   - Merge from `stage` to `main` according to team agreement
   - Testing: Hook in GitHub Actions for live code testing
-      - E.g. of this in your `data-structures-and-algorithms` repo.
-
+    - E.g. of this in your `data-structures-and-algorithms` repo.
 
 ## Development Schedule
 
@@ -111,7 +110,7 @@ Tools At Your Disposal
 
 Why a deck? It's a helpful tool to keep you on time and on focus. Also, you will spend a lot of time in dev jobs speaking in front of a deck, so this is good practice for that. Know what's on screen behind you and prepare to speak in what appears to be an 'ad-hoc' fashion in front of it.
 
-[Presentation Deck Template](https://docs.google.com/presentation/d/1ObrNpOqGhyaKRTIDXnFaIRVKMBGiiCiFkfJJ9T2xi_s/edit#slide=id.g2accd1c413_3_31)
+[Presentation Deck Template](https://docs.google.com/presentation/d/1NSEK-jBazpHF4oCLv0xEhOq7SxdUjpZ0LJHdUw9sevU/edit#slide=id.g2accd1c413_3_31)
 
 **NOTE:** Use the template as a baseline. It's completely fine to modify/enhance it. If you prefer another authoring tool then use it. But make sure it meets baseline requirements of Template.
 
